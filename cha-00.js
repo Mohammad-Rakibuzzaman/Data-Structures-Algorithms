@@ -3,12 +3,15 @@ create a fimctopm wjocj takes 2 pm (allStudents & studentName)
 iterate over all students and find that specific user "studentName"   */
 
 
-let allStudents = ["Ratul", "Nishant", "Protik", "Tauhid", "Riad"];
+//this is the data structure (Which is array ;)))
+const allStudents = ["Ratul", "Nishant", "Protik", "Tauhid", "Riad"];
 
 
 
 function searchStudent(allStudents, studentName) {
     
+
+    //below is the algorithm we used so far
     let isFound = -1;
     for(let i = 0; i < allStudents.length; i++){
         if(allStudents[i] == studentName){
@@ -26,5 +29,18 @@ function searchStudent(allStudents, studentName) {
 }
 
 
+//arrow function es 6 i gueess
 
-searchStudent(allStudents, "Protik");
+const findStudent = (allStudents, studentName) => {
+
+    for(let i = 0; i < allStudents.length; i++){
+        if(allStudents[i] === studentName){
+            console.log(`Found ${studentName}`);
+        } 
+    }
+
+}
+
+
+// searchStudent(allStudents, "Protik");
+findStudent(allStudents, "Protik");
