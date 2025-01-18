@@ -86,13 +86,22 @@ class MyArray {
 
         let deleteData = this.data[index];
 
-        for(let i = 0; i < this.length; i++){
-            if(i === index){
-                delete this.data[i];
+        // for(let i = 0; i < this.length; i++){
+        //     if(i >= index){
+        //         delete this.data[i];
+        //         this.data[i] = this.data[i+1];
                 
-                
-            }  
+        //     }  
+        // }
+
+        for(let i = index; i < this.length - 1; i++) {
+            this.data[i] = this.data[i + 1];
         }
+
+        this.pop();
+        // delete this.data[this.length - 1];
+        // this.length--;
+
         // return this.data[index];
         return deleteData;
 
@@ -124,11 +133,14 @@ myNewArray.push("7");
 // myNewArray.shift();
 // console.log(myNewArray);
 
-console.log(myNewArray);
-console.log(myNewArray.shift());
-console.log(myNewArray);
-console.log(myNewArray.shift());
-console.log(myNewArray);
+// console.log(myNewArray);
+// console.log(myNewArray.shift());
+// console.log(myNewArray);
+// console.log(myNewArray.shift());
+// console.log(myNewArray);
 
 
-// console.log(myNewArray.deleteByIndex(0));
+console.log(myNewArray);
+// myNewArray.deleteByIndex();
+console.log(myNewArray.deleteByIndex(2));
+console.log(myNewArray);
