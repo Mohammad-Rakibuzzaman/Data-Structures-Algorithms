@@ -82,12 +82,33 @@ class MyArray {
     }
 
 
+    deleteByIndex(index){
+
+        let deleteData = this.data[index];
+
+        for(let i = 0; i < this.length; i++){
+            if(i === index){
+                delete this.data[i];
+                
+                
+            }  
+        }
+        // return this.data[index];
+        return deleteData;
+
+    }
+
+
+
+
 }
 
 const myNewArray = new MyArray();
 myNewArray.push("Ratul");
 myNewArray.push(4);
 myNewArray.push("Rahul");
+myNewArray.push("Labiba rahman");
+myNewArray.push("7");
 
 // console.log(myNewArray)
 // myNewArray.pop();
@@ -108,3 +129,6 @@ console.log(myNewArray.shift());
 console.log(myNewArray);
 console.log(myNewArray.shift());
 console.log(myNewArray);
+
+
+// console.log(myNewArray.deleteByIndex(0));
