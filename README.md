@@ -1,4 +1,3 @@
-# dsa-js
-
+# Learn DSA
 
 
